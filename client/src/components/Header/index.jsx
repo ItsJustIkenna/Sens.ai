@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div>
-      <nav className="navbar is-transparent">
+      <nav className="navbar is-transparent" style={{backgroundColor: "red"}}>
   <div className="navbar-brand">
     <a className="navbar-item" href="/">
       {/* <img src="Sensei.PNG" alt="Logo img" /> */}
@@ -23,10 +23,10 @@ const Header = () => {
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button is-primary" href="/" >
-            <strong>Sign up</strong>
+          <a className="button is-light is-rounded" href="/" >
+            Sign up
           </a>
-          <a className="button is-light" href="/" >
+          <a className="button is-light is-rounded" href="/" >
             Log in
           </a>
         </div>

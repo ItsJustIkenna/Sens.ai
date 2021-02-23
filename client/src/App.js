@@ -12,7 +12,10 @@ function App() {
       <div className="container is-widescreen" >
       <Logo style= {{ width: "20%"}}/>
       <Title style= {{fontSize : "60px"}} />
-      <Button className="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "1 Engage"/>
+      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "1 Engage"/>
+      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "2 Offer"/>
+      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "3 Connect"/>
+      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "What is an Ikigai"/>
     </div>
     </div>
   );
