@@ -5,4 +5,5 @@ module.exports = {
   OpenPositions: require("./openPositions"),
   Skills: require("./skills"),
   Projects: require("./projects"),
+  Messages: require("./messages"),
 };
