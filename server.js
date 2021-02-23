@@ -10,12 +10,16 @@ app.use(express.json());
 app.use(express.static("client/build"));
 
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:sens.ai", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-  })
+  .connect(
+    process.env.MONGODB_URI ||
+      "mongodb+srv://ikenna-admin:CRJEiIoa4yojidkW@cluster0.k6j0v.mongodb.net/sensai_db?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+      useCreateIndex: true,
+    }
+  )
   .then(() => {
     console.log("Successfully connected to MongoDB");
   })
