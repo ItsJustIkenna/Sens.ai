@@ -13,6 +13,6 @@ const recruiterSchema = new Schema({
   ikigai: { type: Object, required: true },
 });
 
-const Recruiter = mongoose.model("Post", recruiterSchema);
+const Recruiter = mongoose.model("Recruiter", recruiterSchema);
 
 module.exports = Recruiter;
