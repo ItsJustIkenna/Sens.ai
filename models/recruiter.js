@@ -5,10 +5,14 @@ const recruiterSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
   email: { type: String, required: true },
-  image: { type: String, data: Buffer },
+  profile_picture: { type: Image, required: true },
   name: { type: String, required: true },
   position: { type: String, required: true },
   website: { type: String, required: true },
-  op_id: { type: Object, required: true },
+  open_positions: { type: Object, required: true },
   ikigai: { type: Object, required: true },
 });
+
+const Recruiter = mongoose.model("Post", recruiterSchema);
+
+module.exports = Recruiter;
