@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
+const routes = require("./routes/index");
 
 const PORT = process.env.PORT || 3001;
 
@@ -32,6 +33,8 @@ app.get("/api/config", (req, res) => {
     success: true,
   });
 });
+
+app.use(routes);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
