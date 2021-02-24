@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Button = ({backgroundColor, borderRadius, title}) => {
+const Button = ({classParams, title, href}) => {
 
     return (
         <div>
-            <button style= {{borderRadius : borderRadius}}>{title}</button>
+            <button className={classParams} href={href} >{title}</button>
         </div>
     )
 }
