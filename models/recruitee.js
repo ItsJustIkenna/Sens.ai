@@ -11,10 +11,30 @@ const recruiteeSchema = new Schema({
   resume: { data: Buffer, contentType: String },
   age: { type: Number, required: true },
   education: { type: String, required: true },
-  projects: { type: Object, required: true },
-  skills: { type: Object, required: true },
-  ikigai: { type: Object, required: true },
-  messages: { type: Object, required: true },
+  projects: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "projects",
+    },
+  ],
+  skills: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "skills",
+    },
+  ],
+  ikigai: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "ikigai",
+    },
+  ],
+  messages: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "messages",
+    },
+  ],
 });
 
 const Recruitee = mongoose.model("Recruitee", recruiteeSchema);

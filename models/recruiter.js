@@ -9,9 +9,24 @@ const recruiterSchema = new Schema({
   name: { type: String, required: true },
   position: { type: String, required: true },
   website: { type: String, required: true },
-  open_positions: { type: Object, required: true },
-  ikigai: { type: Object, required: true },
-  messages: { type: Object, required: true },
+  open_positions: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "openPositions",
+    },
+  ],
+  ikigai: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "ikigai",
+    },
+  ],
+  messages: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "messages",
+    },
+  ],
 });
 
 const Recruiter = mongoose.model("Recruiter", recruiterSchema);
