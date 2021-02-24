@@ -1,24 +1,39 @@
 import React from "react";
 import Header from '../components/Header/index'
 import Logo from '../components/Logo/index'
-import Dropdown from '../components/Dropdown/index'
 
-function Ikigai() {
+function Signup() {
 
   return (
-    <div className="Ikigai" style={{backgroundColor: "red", minHeight: '100vh'}}>
+    <div className="Signup" style={{backgroundColor: "red", minHeight: '100vh'}}>
 
 
       {/* Login / Signup */}
       <Header />
       <div className="container is-widescreen" >
       <Logo href="/" src= "../Sensei.PNG" style= {{ width: "20%"}} position = "left" />
-      <Dropdown />
+
+{/* Title */}
+
+    <div className="content">
+      <h1 className="title has-text-black is-4">Sign up</h1>
+    </div>
 
 
-      {/* Form What do you love? */}
+      {/* Form Username */}
 
-
+      <div className="field">
+  <p className="control has-icons-left has-icons-right">
+  <div className="mb-2 is-6 has-text-white">Username:</div>
+    <input className="input" type="text" placeholder="" style={{backgroundColor : "transparent"}} />
+    <span className="icon is-small is-left">
+      <i className="fas fa-envelope"></i>
+    </span>
+    <span className="icon is-small is-right">
+      <i className="fas fa-check"></i>
+    </span>
+  </p>
+</div>
 
 
 {/* Form Email */}
@@ -107,4 +122,4 @@ function Ikigai() {
   );
 }
 
-export default Ikigai;
+export default Signup;
