@@ -14,25 +14,25 @@ const recruiteeSchema = new Schema({
   projects: [
     {
       type: Schema.Types.ObjectId,
-      ref: "projects",
+      ref: "Projects",
     },
   ],
   skills: [
     {
       type: Schema.Types.ObjectId,
-      ref: "skills",
+      ref: "Skills",
     },
   ],
   ikigai: [
     {
       type: Schema.Types.ObjectId,
-      ref: "ikigai",
+      ref: "Ikigai",
     },
   ],
   messages: [
     {
       type: Schema.Types.ObjectId,
-      ref: "messages",
+      ref: "Messages",
     },
   ],
 });
