@@ -23,10 +23,10 @@ const Header = () => {
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button is-light is-rounded" href="/" >
+          <a className="button is-light is-rounded" href="../pages/signup" >
             Sign up
           </a>
-          <a className="button is-light is-rounded" href="/" >
+          <a className="button is-light is-rounded" href="../pages/login" >
             Log in
           </a>
         </div>

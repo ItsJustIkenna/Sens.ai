@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Logo = ({ width}) => {
+const Logo = ({width, src}) => {
     return (
         <div>
-            <img src="Sensei.PNG" alt="Logo img" className="is-align-self-center" style={{ width : width}}/>
+            <img src={src} alt="Logo img" className="is-align-self-center" style={{ width : width}}/>
         </div>
     )
 }
