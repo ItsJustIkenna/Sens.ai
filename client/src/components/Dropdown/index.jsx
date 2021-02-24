@@ -1,38 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const Dropdown = ({fontSize}) => {
-    return (
-        <div className="dropdown is-active">
-  <div className="dropdown-trigger">
-    <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
-      <span>Dropdown button</span>
-      <span className="icon is-small">
-        <i className="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </div>
-  <div className="dropdown-menu" id="dropdown-menu" role="menu">
-    <div className="dropdown-content">
-      <a href="/" className="dropdown-item">
-        Dropdown item
-      </a>
-      <a href="/" className="dropdown-item">
-        Other dropdown item
-      </a>
-      <a href="/" className="dropdown-item">
-        Active dropdown item
-      </a>
-      <a href="/" className="dropdown-item">
-        Other dropdown item
-      </a>
-      <hr className="dropdown-divider" />
-      <a href="/" className="dropdown-item">
-        With a divider
-      </a>
-    </div>
-  </div>
-</div>
-    )
-}
+const Dropdown = ({ fontSize, none, option1, option2, option3, option4, option5 }) => {
+  return (
+      
+    <select style={{width : "100%" , height : "40px" , backgroundColor : "transparent" , borderBlockColor : "white" , marginBottom : "15px" }} >
+      <option selected value={none}></option>
+      <option value={option1}>{option1}</option>
+      <option value={option2}>{option2}</option>
+      <option value={option3}>{option3}</option>
+      <option value={option4}>{option4}</option>
+      <option value={option5}>{option5}</option>
+    </select>
+  );
+};
 
-export default Dropdown
+export default Dropdown;
