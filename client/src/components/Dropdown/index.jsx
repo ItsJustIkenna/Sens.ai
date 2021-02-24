@@ -1,8 +1,10 @@
 import React from 'react'
 
+const isActive = false;
+
 const Dropdown = ({fontSize}) => {
     return (
-        <div className="dropdown is-active">
+        <div className="dropdown is-active" onClick={isActive}>
   <div className="dropdown-trigger">
     <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
       <span>Dropdown button</span>
