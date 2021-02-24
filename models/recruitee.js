@@ -14,6 +14,7 @@ const recruiteeSchema = new Schema({
   projects: { type: Object, required: true },
   skills: { type: Object, required: true },
   ikigai: { type: Object, required: true },
+  messages: { type: Object, required: true },
 });
 
 const Recruitee = mongoose.model("Recruitee", recruiteeSchema);

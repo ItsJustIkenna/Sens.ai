@@ -11,6 +11,7 @@ const recruiterSchema = new Schema({
   website: { type: String, required: true },
   open_positions: { type: Object, required: true },
   ikigai: { type: Object, required: true },
+  messages: { type: Object, required: true },
 });
 
 const Recruiter = mongoose.model("Recruiter", recruiterSchema);

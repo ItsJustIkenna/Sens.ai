@@ -1,109 +1,91 @@
 import React from "react";
-import Header from '../components/Header/index'
-import Logo from '../components/Logo/index'
-import Dropdown from '../components/Dropdown/index'
+import Header from "../components/Header/index";
+import Logo from "../components/Logo/index";
+import Dropdown from "../components/Dropdown/index";
 
 function Ikigai() {
-
   return (
-    <div className="Ikigai" style={{backgroundColor: "red", minHeight: '100vh'}}>
-
-
+    <div
+      className="Ikigai"
+      style={{ backgroundColor: "red", minHeight: "100vh" }}
+    >
       {/* Login / Signup */}
+
       <Header />
-      <div className="container is-widescreen" >
-      <Logo href="/" src= "../Sensei.PNG" style= {{ width: "20%"}} position = "left" />
-      <Dropdown />
 
+      
 
+      <section className="container is-widescreen has-padding-top-5">
 
-      {/* Form What do you love? */}
+      <Logo
+          href="/"
+          src="../Sensei.PNG"
+          style={{ width: "20%" }}
+          position="left"
+        />
 
+        {/* What do you love? Dropdown */}
 
+        <div className="mb-2 is-6 has-text-white">What do you love?</div>
 
+        <Dropdown 
+          none = "select"
+          option1 = "I love front-end coding"
+          option2 = "I love design"
+          option3 = "I love back-end coding"
+          option4 = "I love Software Engineering"
+          option5 = "I love Game Development"
+          />
 
-{/* Form Email */}
+        {/* What are you good at? Dropdown */}
 
-      <div className="field">
-  <p className="control has-icons-left has-icons-right">
-  <div className="mb-2 is-6 has-text-white">Email:</div>
-    <input className="input" type="email" placeholder="" style={{backgroundColor : "transparent"}} />
-    <span className="icon is-small is-left">
-      <i className="fas fa-envelope"></i>
-    </span>
-    <span className="icon is-small is-right">
-      <i className="fas fa-check"></i>
-    </span>
-  </p>
-</div>
+        <div className="mb-2 is-6 has-text-white">What are you good at?</div>
 
-{/* Form Password */}
+        <Dropdown 
+          none = "select"
+          option1 = "I love front-end coding"
+          option2 = "I love design"
+          option3 = "I love back-end coding"
+          option4 = "I love Software Engineering"
+          option5 = "I love Game Development"
+          />
 
-<div className="field">
-  <p className="control has-icons-left">
-  <div className="mb-2 is-6 has-text-white">Password:</div>
-    <input className="input" type="password" placeholder="" style={{backgroundColor : "transparent"}} />
-    <span className="icon is-small is-left">
-      <i className="fas fa-lock"></i>
-    </span>
-  </p>
-</div>
+        {/* What does the world need? Dropdown */}
 
-{/* Form Confirm Password */}
+        <div className="mb-2 is-6 has-text-white">What does the world need?</div>
 
-<div className="field">
-  <p className="control has-icons-left">
-  <div className="mb-2 is-6 has-text-white">Comfirm Password:</div>
-    <input className="input" type="password" placeholder="" style={{backgroundColor : "transparent"}} />
-    <span className="icon is-small is-left">
-      <i className="fas fa-lock"></i>
-    </span>
-  </p>
-</div>
+        <Dropdown 
+          none = "select"
+          option1 = "I love front-end coding"
+          option2 = "I love design"
+          option3 = "I love back-end coding"
+          option4 = "I love Software Engineering"
+          option5 = "I love Game Development"
+          />
 
+        {/* What can you be paid for? Dropdown */}
 
-{/* Form Sign Up Button */}
+        <div className="mb-2 is-6 has-text-white">What can you be paid for?</div>
 
-<div className="field">
-  <p className="control">
-    <button className="button is-success" id="signup-btn">
-      Sign up
-    </button>
-  </p>
-</div>
+        <Dropdown 
+          none = "select"
+          option1 = "I love front-end coding"
+          option2 = "I love design"
+          option3 = "I love back-end coding"
+          option4 = "I love Software Engineering"
+          option5 = "I love Game Development"
+          />
 
-{/* Form Sign Up Facebook Button */}
+        {/* Generate Ikigai Button */}
 
-<div className="field">
-  <p className="control">
-    <button className="button is-success" id="signup-facebook-btn">
-      Sign up with Facebook
-    </button>
-  </p>
-</div>
-
-{/* Form Sign Up Google Button */}
-
-<div className="field">
-  <p className="control">
-    <button className="button is-success" id="signup-google-btn">
-      Sign up with Google
-    </button>
-  </p>
-</div>
-
-{/* Form Sign Up Linkedin Button */}
-
-<div className="field">
-  <p className="control">
-    <button className="button is-success" id="signup-linkedin-btn">
-      Sign up with Linkedin
-    </button>
-  </p>
-</div>
-
-
-    </div>
+        <div className="field">
+          <p className="control">
+            <button className="button is-success" id="generate-ikigai-btn">
+            Generate Ikigai
+            </button>
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
