@@ -15,11 +15,11 @@ function Landing() {
       <div className="container is-widescreen" >
       <Logo src= "Sensei.PNG" style= {{ width: "20%"}} position = "center" />
       <Title style= {{fontSize : "60px"}} />
-      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "1 Engage"/>
-      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "2 Offer"/>
-      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "3 Connect"/>
+      <Button className="button is-black is-rounded" style= {{fontSize : "60px", borderRadius : "250px"}} title = "1 Engage"/>
+      <Button className="button is-black is-rounded" style= {{fontSize : "60px", borderRadius : "250px"}} title = "2 Offer"/>
+      <Button className="button is-black is-rounded" style= {{fontSize : "60px", borderRadius : "250px"}} title = "3 Connect"/>
       <Link to="./pages/ikigai">
-      <Button classParams="button is-black" style= {{fontSize : "60px", borderRadius : "250px"}} title = "What is an Ikigai" href = "./ikigai"/>
+      <Button className="button is-black is-rounded" style= {{fontSize : "60px", borderRadius : "250px"}} title = "What is an Ikigai" href = "./ikigai"/>
       </Link>
       
     </div>

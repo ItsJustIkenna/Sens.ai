@@ -4,6 +4,7 @@ import UserBio from '../UserBio/index'
 import UserProjects from '../UserProjects/index'
 import ProfileMenu from '../ProfileMenu/index'
 
+
 const UserMenu = ({ width, height, src, position }) => {
   return (
     <div className="column is-11 is-flex" style={{ justifyContent: position }}>
@@ -15,7 +16,7 @@ const UserMenu = ({ width, height, src, position }) => {
           <UserBio Description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum neque non blanditiis dolore voluptate iure perferendis ut, nemo quidem, voluptas, voluptatibus ab nihil! Exercitationem, saepe maiores natus distinctio maxime odio." />
           <ProfileMenu />
           <UserProjects Description="Project " />
-
+        
       </section>
     </div>
   );
