@@ -1,5 +1,5 @@
 import React from "react";
-import Header from '../components/Header/index'
+import Header from "../components/Header_Log_Page/index";
 import Logo from '../components/Logo/index'
 
 function Login() {
@@ -7,12 +7,13 @@ function Login() {
   return (
     <div className="Login" style={{backgroundColor: "red", minHeight: '100vh'}}>
 
-      {/* Header */}
+      
 
 
-      <Header />
       <div className="container is-widescreen" >
-      <Logo src= "../Sensei.PNG" style= {{ width: "20%"}} position = "left"  />
+
+      {/* Header */}
+      <Header />
 
       {/* Title */}
 

@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import Header from "../components/Header/index";
-import Logo from "../components/Logo/index";
+import Header from "../components/Header_Log_Page/index";
 
 function Signup() {
   
@@ -9,16 +8,10 @@ function Signup() {
       className="Signup"
       style={{ backgroundColor: "red", minHeight: "100vh" }}
     >
-      {/* Login / Signup */}
-      <Header />
       <div className="container is-widescreen">
-        <Logo
-          href="/"
-          src="../Sensei.PNG"
-          style={{ width: "20%" }}
-          position="left"
-        />
 
+        <Header />
+        
         {/* Title */}
 
         <div className="content">
