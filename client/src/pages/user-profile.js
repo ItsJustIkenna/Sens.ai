@@ -10,7 +10,7 @@ function userProfile() {
     <div className="userProfile" style={{backgroundColor: "red", minHeight: '100vh'}}>
       <Header />
       <UserTitle position="center" title="Jerome Parkins"/>
-      <UserMenu position="right" />
+      <UserMenu position="right" src="https://www.placecage.com/200/200"/>
       <div className="container is-widescreen" >
       
       
