@@ -12,19 +12,19 @@ const recruiterSchema = new Schema({
   open_positions: [
     {
       type: Schema.Types.ObjectId,
-      ref: "openPositions",
+      ref: "OpenPositions",
     },
   ],
   ikigai: [
     {
       type: Schema.Types.ObjectId,
-      ref: "ikigai",
+      ref: "Ikigai",
     },
   ],
   messages: [
     {
       type: Schema.Types.ObjectId,
-      ref: "messages",
+      ref: "Messages",
     },
   ],
 });

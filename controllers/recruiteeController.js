@@ -9,7 +9,11 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    db.Recruitee.findById(req.query.id)
+    db.Recruitee.findById(req.params.id)
+      .populate("ikigai")
+      .populate("messages")
+      .populate("skills")
+      .populate("projects")
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
