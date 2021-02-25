@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Logo = ({width, src, position}) => {
+const Logo = ({width, height, src, position}) => {
     return (
         <div className="is-flex" style={{justifyContent : position}}>
             <a class="" href="/">
-            <figure className='image is-256x256'><img src={src} /></figure>
+            <figure className=''><img src={src} alt="" width="200px"  height="400px" /></figure>
             </a>
             {/* <img src={src} alt="Logo img" className="is-align-self-center" style={{ width : width}}/> */}
         </div>

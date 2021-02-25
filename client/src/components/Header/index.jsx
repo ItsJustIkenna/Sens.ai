@@ -6,7 +6,6 @@ const Header = () => {
       <nav className="navbar is-transparent" style={{backgroundColor: "red"}}>
   <div className="navbar-brand">
     <a className="navbar-item" href="/">
-      {/* <img src="Sensei.PNG" alt="Logo img" /> */}
     </a>
     <div className="navbar-burger" data-target="navbarExampleTransparentExample">
       <span></span>
