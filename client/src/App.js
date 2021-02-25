@@ -4,6 +4,7 @@ import Ikigai from "./pages/ikigai";
 import Landing from "./pages/landing";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
+import userProfile from "./pages/user-profile";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/pages/login" exact component={Login} />
           <Route path="/pages/signup" exact component={Signup} />
           <Route path="/pages/ikigai" exact component={Ikigai} />
+          <Route path="/pages/user-profile" exact component={userProfile} />
       </div>
       </Switch>
     </Router>
