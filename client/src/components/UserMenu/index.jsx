@@ -7,7 +7,7 @@ const UserMenu = ({ width, height, src, position }) => {
         <UserPhoto src={src} />
       <section
         className="container"
-        style={{ backgroundColor: "black", height: "55vh", width: "80%" , borderRadius : "100px" }}
+        style={{ backgroundColor: "black", height: "55vh", width: "100%" , borderRadius : "100px" }}
       ></section>
     </div>
   );
