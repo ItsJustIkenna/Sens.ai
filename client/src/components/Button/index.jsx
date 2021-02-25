@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Button = ({classParams, title, href}) => {
+const Button = ({className, title, href}) => {
 
     return (
         <div>
-            <button className={classParams} href={href} >{title}</button>
+            <button className={className} href={href} style={{ borderColor : "white"}} >{title}</button>
         </div>
     )
 }
