@@ -68,9 +68,9 @@ function Login() {
 
 <div className="field">
   <p className="control">
-    <button className="button is-success" id="login-btn">
-      Login
-    </button>
+  <a className="button is-light is-rounded" href="../../pages/user-profile" >
+            Log in
+          </a>
   </p>
 </div>
 

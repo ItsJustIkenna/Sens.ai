@@ -3,7 +3,6 @@ import Header from '../components/Header_Signed_In/index'
 import UserMenu from '../components/UserMenu/index'
 import UserTitle from '../components/UserTitle/index'
 import CRUDMenu from '../components/CRUDMenu/index'
-import Button from '../components/Button/index'
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -13,10 +12,9 @@ function userProfile() {
     <div className="userProfile" style={{backgroundColor: "red", minHeight: '100vh'}}>
       <Header />
       <UserTitle position="center" title="Jerome Parkins"/>
-      <UserMenu position="center" src="https://www.placecage.com/300/300"/>
+      <UserMenu position="center" src="../Prof_guy.jpg"/>
       <div className="column"></div>
       <CRUDMenu />
-      <Button className="button is-black border-color-white is-rounded" style= {{fontSize : "60px", borderRadius : "250px"}} float = "left" title = "Ikigai"/>
       <div className="container is-widescreen" >
       
       
