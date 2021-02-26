@@ -29,6 +29,7 @@ function Signup() {
               placeholder=""
               style={{ backgroundColor: "transparent" }}
               id="sign-up-username"
+              onSubmit=""
             />
             <span className="icon is-small is-left">
               <i className="fas fa-envelope"></i>
@@ -97,9 +98,9 @@ function Signup() {
 
         <div className="field">
           <p className="control">
-            <button className="button is-success" id="signup-btn">
-              Sign up
-            </button>
+          <a className="button is-light is-rounded" href="../../pages/recruiter-profile" >
+            Sign up
+          </a>
           </p>
         </div>
 

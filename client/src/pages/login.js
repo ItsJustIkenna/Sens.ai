@@ -1,14 +1,13 @@
 import React from "react";
 import Header from "../components/Header_Log_Page/index";
-import Logo from '../components/Logo/index'
+
 
 function Login() {
 
+
+
   return (
     <div className="Login" style={{backgroundColor: "red", minHeight: '100vh'}}>
-
-      
-
 
       <div className="container is-widescreen" >
 
@@ -26,7 +25,7 @@ function Login() {
       <div className="field">
   <p className="control has-icons-left has-icons-right">
   <div className="mb-2 is-6 has-text-white">Username:</div>
-    <input className="input" type="text" placeholder="" style={{backgroundColor : "transparent"}} />
+    <input className="input" type="text" placeholder="" style={{backgroundColor : "transparent"}}/>
     <span className="icon is-small is-left">
       <i className="fas fa-envelope"></i>
     </span>
@@ -68,9 +67,9 @@ function Login() {
 
 <div className="field">
   <p className="control">
-    <button className="button is-success" id="login-btn">
-      Login
-    </button>
+  <a className="button is-light is-rounded" href="../../pages/user-profile" >
+            Log in
+          </a>
   </p>
 </div>
 
