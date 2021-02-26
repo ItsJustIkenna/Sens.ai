@@ -4,13 +4,16 @@ const db = require("../models");
 module.exports = {
   findAll: function (req, res) {
     db.Recruiter.find(req.query)
+      .populate("ikigai")
+      .populate("messages")
+      .populate("open_positions")
       .sort({ date: -1 })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
     db.Recruiter.findById(req.params.id)
-      .populate("ikigai" )
+      .populate("ikigai")
       .populate("messages")
       .populate("open_positions")
       .then((dbModel) => res.json(dbModel))

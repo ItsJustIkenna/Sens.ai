@@ -4,6 +4,10 @@ const db = require("../models");
 module.exports = {
   findAll: function (req, res) {
     db.Recruitee.find(req.query)
+      .populate("ikigai")
+      .populate("messages")
+      .populate("skills")
+      .populate("projects")
       .sort({ date: -1 })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
