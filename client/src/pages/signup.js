@@ -29,6 +29,7 @@ function Signup() {
               placeholder=""
               style={{ backgroundColor: "transparent" }}
               id="sign-up-username"
+              onSubmit=""
             />
             <span className="icon is-small is-left">
               <i className="fas fa-envelope"></i>
