@@ -1,12 +1,11 @@
 import React from "react";
+import './index.css';
 
 const UserTitle = ({ width, height, src, position, title }) => {
   return (
-    <div className="column is-flex" style={{ justifyContent: position }}>
-      <section
-        className="button title is-black"
-        style={{ backgroundColor: "black", height: "55px", width: "400px" , borderRadius : "100px" }}
-      >{title}</section>
+    <div className="column" style={{ justifyContent: position }}>
+      <h1
+        className="usertitle title" id="usertitle" style={{textAlign: "center"}}>{title}</h1>
     </div>
   );
 };

@@ -11,10 +11,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function UserProfile() {
   const [projectTitle, setProjectTitle] = useState("");
   const [userdata, setUserdata] = useState({
-    username: "",
-    bio: "",
+    username: "Loading Username...",
+    bio: "Loading Bio...",
     src: "https://www.placecage.com/300/300",
-    projects: [""],
+    projects: ["Loading Projects..."],
   });
 
   useEffect(() => {
@@ -25,6 +25,7 @@ function UserProfile() {
         username: response.data[0].username,
         bio: response.data[0].bio,
         projects: response.data[0].projects[0].name,
+        id: response.data[0].projects[0].id
       });
     });
   }, []);
@@ -36,27 +37,25 @@ function UserProfile() {
   return (
     <div
       className="userProfile"
+      id="background"
       style={{ backgroundColor: "red", minHeight: "100vh" }}
     >
       <Header />
-      <UserTitle position="center" title={userdata.username} />
+      {/* <UserTitle position="center" title={userdata.username} /> */}
       <UserMenu
         position="center"
         src={userdata.src}
         bioDes={userdata.bio}
         op1={userdata.projects}
+        id={userdata.id}
         handleSubmit={handleSubmit}
         projectTitle={projectTitle}
         setProjectTitle={setProjectTitle}
+        title={userdata.username}
       />
       <div className="column"></div>
-      <CRUDMenu />
-      <Button
-        className="button is-black border-color-white is-rounded"
-        style={{ fontSize: "60px", borderRadius: "250px" }}
-        float="left"
-        title="Ikigai"
-      />
+      {/* <CRUDMenu /> */}
+      
       <div className="container is-widescreen"></div>
     </div>
   );

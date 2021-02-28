@@ -6,11 +6,13 @@ function Signup() {
   return (
     <div
       className="Signup"
+      id="background"
       style={{ backgroundColor: "red", minHeight: "100vh" }}
     >
+      <Header />
       <div className="container is-widescreen">
 
-        <Header />
+        
         
         {/* Title */}
 
