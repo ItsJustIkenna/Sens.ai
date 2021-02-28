@@ -7,6 +7,7 @@ function Ikigai() {
   return (
     <div
       className="Ikigai"
+      id="background"
       style={{ backgroundColor: "red", minHeight: "100vh" }}
     >
       {/* Login / Signup */}

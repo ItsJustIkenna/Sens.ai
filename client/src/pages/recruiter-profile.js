@@ -9,7 +9,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 function userProfile() {
 
   return (
-    <div className="userProfile" style={{backgroundColor: "red", minHeight: '100vh'}}>
+    <div
+      className="recruiterProfile"
+      id="background"
+      style={{ backgroundColor: "red", minHeight: "100vh" }}
+    >
       <Header />
       <UserTitle position="center" title="Jerome Parkins"/>
       <UserMenu position="center" src="../Prof_guy.jpg"/>

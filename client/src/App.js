@@ -6,7 +6,7 @@ import Login from "./pages/login";
 import Signup from "./pages/signup";
 import userProfile from "./pages/user-profile";
 import recruiterProfile from "./pages/recruiter-profile";
-
+import './App.css'
 
 function App() {
 

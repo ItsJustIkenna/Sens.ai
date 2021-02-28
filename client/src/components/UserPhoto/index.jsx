@@ -5,14 +5,14 @@ const UserPhoto = ({ width, height, src, position }) => {
     <div
       className="circle"
       style={{
-        position: "relative",
-        left: "100px",
-        bottom: "70px",
+        position: "absolute",
+        bottom: "260px",
+        left: "50px",
         zIndex: "2",
-        width: "300px",
-        height: "300px",
+        width: "275px",
+        height: "275px",
         overflow: "hidden",
-        display: "flex",
+        display: "inline",
         justifyContent: "center",
         alignItems: "center",
       }}
