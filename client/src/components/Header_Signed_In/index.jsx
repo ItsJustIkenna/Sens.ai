@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../Logo/index";
 import Button from "../Button/index";
 
-const Header = () => {
+const Header = (className) => {
   return (
     <div className="" style={{ verticalAlign: "center" }}>
       <nav
@@ -35,16 +35,23 @@ const Header = () => {
               <div className="buttons">
                 <a href="./user-profile">
                   <Button
-                    className="circle-btn mr-6 "
+                    className="circle-btn mr-6"
                     title="Profile"
-                    padding="25px 17px 10px 17px"
+                    padding="35px 27px 20px 27px"
+                  />
+                  </a>
+                <a href="./homepage-user">
+                  <Button
+                    className="circle-btn mr-6 "
+                    title="Connect"
+                    padding="35px 17px 20px 17px"
                   />
                 </a>
                 <a href="./messages">
                 <Button
                   className="circle-btn mr-6 "
                   title="Inbox"
-                  padding="25px 20px 10px 20px"
+                  padding="35px 30px 20px 30px"
                 />
                 </a>
                 <a href="/">

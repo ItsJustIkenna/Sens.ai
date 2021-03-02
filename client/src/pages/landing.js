@@ -15,11 +15,11 @@ function Landing() {
     >
       <Header />
       <div className="container is-widescreen" style={{display: "table" , justifyContent: "center"}}>
-        <Logo src="Sensei.PNG" width="250px" position="center" />
-        <Title fontSize="60px" />
+        <Logo src="Sensei.PNG" width="250px" position="center" className="fade-in" />
+        <Title fontSize="60px" className="has-text-white has-text-centered fade-in floating" />
         <div className="column is-full" style={{height : "200px" , display : "flex" , justifyContent: "space-between"}}>
         <Button
-          className="circle-btn is-black is-rounded"
+          className="circle-btn is-black is-rounded floating"
           title="1"
           paragraph="Engage"
           fontSize1="50px"
@@ -27,14 +27,14 @@ function Landing() {
           padding="50px 40px 50px 40px"
         />
         <Button
-          className="circle-btn is-black is-rounded"
+          className="circle-btn is-black is-rounded floating"
           title="2"
           paragraph="Offer"
           fontSize1="50px"
           fontSize2="30px"
         />
         <Button
-          className="circle-btn is-black is-rounded"
+          className="circle-btn is-black is-rounded floating"
           title="3"
           paragraph="Connect"
           fontSize1="50px"
@@ -45,14 +45,14 @@ function Landing() {
         <div className="column is-full" style={{ display: "flex" , justifyContent: "center"}}>
         <Link to="./pages/ikigai">
           <Button
-            className="button circle-btn is-rounded"
+            className="button circle-btn is-rounded floating"
             title="What is an "
             title2=" Ikigai"
             href="./ikigai"
             margin="50px"
             fontSize1="30px"
             fontSize2="30px"
-            padding="0px 50px 10px 50px"
+            padding="0px 50px 50px 50px"
             fontWeight="700"
           />
         </Link>

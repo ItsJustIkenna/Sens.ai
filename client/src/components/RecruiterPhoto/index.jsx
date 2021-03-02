@@ -1,7 +1,7 @@
 import React from "react";
 
-const UserPhoto = ({ bottom, left, width, height, src, position }) => {
-  return (
+const RecruiterPhoto = ({ bottom , left, src, position }) => {
+  return ( 
     <div
       className="circle"
       style={{
@@ -11,18 +11,18 @@ const UserPhoto = ({ bottom, left, width, height, src, position }) => {
         zIndex: "2",
         width: "300px",
         height: "300px",
-        overflow: "hidden",
         display: "inline",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
       <img src={src} alt="" style={{ borderRadius: "50%" , width: "300px", height: "300px"}} />
+      <h1 style={{content: "block" , color: "black", backgroundColor: "white" , zIndex: 25 , textAlign : "center" , borderRadius: "25px" , fontWeight : "700" , fontSize : "20px" }}>South East-District Recruiter</h1>
     </div>
   );
 };
 
-export default UserPhoto;
+export default RecruiterPhoto;
 
 // overflow: hidden;
 //  display: flex;

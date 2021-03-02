@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header_Signed_In/index";
-import UserMenu from "../components/UserMenu/index";
-import ProjectModal from "../components/ProjectsModal/index";
-import BioModal from "../components/BioModal/index";
+import RecruiterSection from "../components/RecruiterSection/index";
 import axios from "axios";
-const id = "603beda1b63b4d81b0f7f795";
+const id = "6036a59fba6a2a7814a525c4";
 
-function UserProfile() {
+function Homepage() {
   const [projectTitle, setProjectTitle] = useState("");
   const [userdata, setUserdata] = useState({
-    username: "Loading Username...",
+    name: "Loading Username...",
     bio: "Loading Bio...",
-    src: "https://www.placecage.com/300/300",
-    projects: ["Loading Projects..."],
+    src: "https://www.placecage.com/200/300",
+    position: ["Loading Positions..."],
+    Website: ["Loading Website..."],
+    Ikigai: ["Loading Website..."],
   });
   const [showModal, setShowModal] = useState(false);
   const [showBioModal, setShowBioModal] = useState(false);
@@ -24,7 +24,7 @@ function UserProfile() {
   };
 
   useEffect(() => {
-    axios.get("/api/recruitee/" + id).then((response) => {
+    axios.get("/api/recruiter/" + id).then((response) => {
       console.log(response.data);
       setUserdata({ ...userdata, ...response.data });
       setProjectTitle("");
@@ -43,35 +43,20 @@ function UserProfile() {
     >
       <Header />
       {/* <UserTitle position="center" title={userdata.username} /> */}
-      <UserMenu
+      <RecruiterSection
         position="center"
         src={userdata.src}
         bioDes={userdata.bio}
         option={userdata.projects}
         id={userdata.id}
         projectTitle={projectTitle}
-        title={userdata.username}
+        title={userdata.name}
         onClick={toggleModal}
         onClickBio={toggleBioModal}
         onClickProjects={toggleModal}
       />
-      <div className="column"></div>
-      {/* <CRUDMenu /> */}
-      <ProjectModal
-        showModal={showModal}
-        setShowModal={toggleModal}
-        setProjectTitle={setProjectTitle}
-        handleSubmit={handleSubmit}
-        modalTitle={"Add your project"}
-      />
-      <BioModal
-        showModal={showBioModal}
-        setShowModal={toggleBioModal}
-        modalTitle={"Add your Bio"}
-      />
-      <div className="container is-widescreen"></div>
     </div>
   );
 }
 
-export default UserProfile;
+export default Homepage;

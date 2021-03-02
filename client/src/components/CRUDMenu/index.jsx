@@ -1,20 +1,21 @@
 import React from "react";
 import Button from "../Button/index";
 
-const CRUDMenu = () => {
+const CRUDMenu = ({onClick}) => {
   return (
     <div style={{display: "flex"}}>
       <Button
-        className="button is-black border-color-white is-rounded"
+        className="button is-black is-rounded"
         style={{ fontSize: "60px", borderRadius: "250px" }}
         float="left"
         title="Edit"
         fontSize1="30px"
         margin="20px 20px 20px 50%"
         padding="30px 80px 35px 80px"
+        onClick={onClick}
       />
       <Button
-        className="button is-black border-color-white is-rounded"
+        className="button is-black is-rounded"
         style={{ fontSize: "60px", borderRadius: "250px" }}
         float="left"
         title="Delete Account"
@@ -23,7 +24,7 @@ const CRUDMenu = () => {
         padding="30px 80px 35px 80px"
       />
       <Button
-        className="button is-black border-color-white is-rounded"
+        className="button is-black is-rounded"
         style={{ fontSize: "60px", borderRadius: "250px" }}
         float="left"
         title="Ikigai"

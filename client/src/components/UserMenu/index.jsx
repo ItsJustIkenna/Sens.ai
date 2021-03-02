@@ -3,9 +3,8 @@ import UserPhoto from "../UserPhoto/index";
 import UserBio from "../UserBio/index";
 import UserProjects from "../UserProjects/index";
 import ProfileMenu from "../ProfileMenu/index";
-import ProjectsForm from "../ProjectsForm/index";
 import CRUDMenu from "../CRUDMenu/index";
-import Button from "../Button/index";
+import '../UserTitle/index';
 
 const UserMenu = ({
   width,
@@ -15,7 +14,7 @@ const UserMenu = ({
   bioDes,
   projDes,
   handleSubmit,
-  op1,
+  option,
   op2,
   op3,
   op4,
@@ -24,6 +23,9 @@ const UserMenu = ({
   setProjectTitle,
   id,
   title,
+  onClick,
+  onClickBio,
+  onClickProjects
 }) => {
   return (
     <div className="container" style={{ alignContent: position }}>
@@ -39,6 +41,13 @@ const UserMenu = ({
           id="usertitle"
         >
           {title}
+      <button
+        className="add-btn"
+        onClick={onClickBio}
+        style={{ float: "right" , margin: "-5px 0px 0px 15px" }}
+      >
+        +
+      </button>
         </h1>
       </div>
 
@@ -46,7 +55,7 @@ const UserMenu = ({
 
       {/* User Picture */}
 
-      <UserPhoto src={src} />
+      <UserPhoto src={src} bottom="260px" left="0px" />
       <section
         className="column"
         style={{
@@ -60,17 +69,13 @@ const UserMenu = ({
       >
         {/* User Picture */}
 
-        <UserBio Description={bioDes} />
+        <UserBio Description={bioDes} onClickBio={onClickBio} />
         <ProfileMenu />
-        <UserProjects Description="Project" option1={op1} id={id} />
-        {/* <ProjectsForm
-          handleSubmit={handleSubmit}
-          projectTitle={projectTitle}
-          setProjectTitle={setProjectTitle}
-        /> */}
+        <UserProjects Description="Project" onClickProjects={onClickProjects} option={option} id={id} />
+        {/*  */}
       </section>
       <div className="column is-12" style={{ display: "inline-block" }}>
-        <CRUDMenu />
+        <CRUDMenu onClick={onClick} />
       </div>
     </div>
   );
