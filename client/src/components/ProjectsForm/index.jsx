@@ -11,12 +11,13 @@ const ProjectsForm = ({
   handleSubmit,
   projectTitle,
   setProjectTitle,
+  setShowModal
 }) => {
   return (
     
     <div
-      className="block "
-      style={{ height: "auto", width: "40%", float: "left" }}
+      className="column "
+      style={{ height: "auto", justifyContent: "center", alignContent: "center" , }}
     >
       
       
@@ -111,7 +112,7 @@ const ProjectsForm = ({
           </button>
         </div>
         <div className="control">
-          <button className="button is-link is-light">Cancel</button>
+          <button className="button is-link is-light" onClick={setShowModal} >Cancel</button>
         </div>
       </div>
     </div>

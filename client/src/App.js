@@ -5,6 +5,7 @@ import Landing from "./pages/landing";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
 import userProfile from "./pages/user-profile";
+import homepage from "./pages/homepage-user";
 import recruiterProfile from "./pages/recruiter-profile";
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/pages/signup" exact component={Signup} />
           <Route path="/pages/ikigai" exact component={Ikigai} />
           <Route path="/pages/user-profile" exact component={userProfile} />
+          <Route path="/pages/homepage-user" exact component={homepage} />
           <Route
             path="/pages/recruiter-profile"
             exact

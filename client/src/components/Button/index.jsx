@@ -14,20 +14,24 @@ const Button = ({
   fontWeight,
   title2,
   backgroundColor,
-  fontColor
+  fontColor,
+  onClick,
+  id
 }) => {
   return (
     <div className="">
       <button
         className={className}
+        id={id}
         href={href}
         style={{
           borderColor: "white",
           float: float,
           padding: padding,
           margin: margin,
-          backgroundColor: backgroundColor
+          backgroundColor: backgroundColor,
         }}
+        onClick={onClick}
       >
         <span
           style={{
@@ -35,7 +39,7 @@ const Button = ({
             alignContent: "center",
             fontSize: fontSize1,
             lineHeight: 0.5,
-            fontWeight: fontWeight
+            fontWeight: fontWeight,
           }}
         >
           {title}
@@ -45,14 +49,14 @@ const Button = ({
             color: "orange",
             alignContent: "center",
             fontSize: fontSize2,
-            fontWeight: fontWeight
+            fontWeight: fontWeight,
           }}
         >
           {title2}
         </span>
         <br />
         <span
-        className="title1"
+          className="title1"
           style={{
             color: "orange",
             alignContent: "center",

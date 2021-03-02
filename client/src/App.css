@@ -16,6 +16,70 @@
   background-color: orange;
   color: white;
 }
+.current {
+  background-color: orange;
+  color: white;
+}
+
+.add-btn {
+  background-color: black;
+  border: none;
+  border-color: white;
+  border-style: solid;
+  color: white;
+  padding: 10px 15px 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  float: left;
+}
+.floating { 
+	animation-name: floating; 
+	animation-duration: 3s; 
+	animation-iteration-count: infinite; 
+	animation-timing-function: ease-in-out; 
+	margin-left: 30px; 
+	margin-top: 5px; 
+} 
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+  }
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+@keyframes floating { 
+	0% { transform: translate(0, 0px); } 
+	50% { transform: translate(0, 15px); } 
+	100% { transform: translate(0, -0px); }	 
+} 
+
 #background {
   
   background-image: linear-gradient(to bottom right, red, yellow);
