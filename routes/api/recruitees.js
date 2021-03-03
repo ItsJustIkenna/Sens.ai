@@ -7,7 +7,7 @@ router
   .get(recruiteeController.findAll)
   .post(recruiteeController.create);
 
-// Matches with "/api/books/:id"
+// Matches with "/api/recruiteeController/:id"
 router
   .route("/:id")
   .get(recruiteeController.findById)

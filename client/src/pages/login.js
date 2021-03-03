@@ -2,6 +2,11 @@ import React from "react";
 import Header from "../components/Header_Log_Page/index";
 
 function Login() {
+
+  const submitLogin = () => {
+    console.log()
+  }
+
   return (
     <div
       className="Login"
@@ -86,6 +91,7 @@ function Login() {
             <a
               className="button is-light is-rounded"
               href="../../pages/user-profile"
+              onClick={submitLogin}
             >
               Log in
             </a>
@@ -106,7 +112,7 @@ function Login() {
 
         <div className="field">
           <p className="control">
-            <button className="button is-success" id="login-google-btn">
+            <button className="button is-success" id="login-google-btn" >
               Login with Google+
             </button>
           </p>

@@ -1,13 +1,6 @@
 import React from "react";
 
 const ProjectsForm = ({
-  fontSize,
-  none,
-  option1,
-  option2,
-  option3,
-  option4,
-  option5,
   handleSubmit,
   projectTitle,
   setProjectTitle,
