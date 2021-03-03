@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/index";
 
-const CRUDMenu = ({onClick}) => {
+const CRUDMenu = ({onClick , toggleEdit}) => {
   return (
     <div style={{display: "flex"}}>
       <Button
@@ -12,7 +12,7 @@ const CRUDMenu = ({onClick}) => {
         fontSize1="30px"
         margin="20px 20px 20px 50%"
         padding="30px 80px 35px 80px"
-        onClick={onClick}
+        onClick={toggleEdit}
       />
       <Button
         className="button is-black is-rounded"

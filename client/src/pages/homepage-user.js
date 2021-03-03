@@ -5,6 +5,9 @@ import axios from "axios";
 const id = "6036a59fba6a2a7814a525c4";
 
 function Homepage() {
+  const [showTransition, setShowTransition] = useState({
+    position: "absolute",
+  });
   const [projectTitle, setProjectTitle] = useState("");
   const [userdata, setUserdata] = useState({
     name: "Loading Username...",
@@ -34,6 +37,7 @@ function Homepage() {
   const handleSubmit = () => {
     console.log(projectTitle);
   };
+
 
   return (
     <div

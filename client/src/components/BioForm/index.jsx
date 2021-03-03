@@ -1,17 +1,11 @@
 import React from "react";
 
 const BioForm = ({
-  fontSize,
-  none,
-  option1,
-  option2,
-  option3,
-  option4,
-  option5,
   handleSubmit,
-  projectTitle,
-  setProjectTitle,
-  setShowModal
+  projectBio,
+  setProjectBio,
+  setShowModal,
+  submitBio
 }) => {
   return (
     
@@ -31,8 +25,8 @@ const BioForm = ({
             className="input"
             type="text"
             placeholder="Text input"
-            value={projectTitle}
-            onChange={(e) => setProjectTitle(e.target.value)}
+            value={projectBio}
+            onChange={setProjectBio}
           />
         </div>
       </div>
@@ -41,7 +35,7 @@ const BioForm = ({
 
       <div className="field is-grouped">
         <div className="control">
-          <button className="button is-link" onClick={handleSubmit}>
+          <button className="button is-link" onClick={submitBio}>
             Submit
           </button>
         </div>

@@ -5,10 +5,10 @@ import "./index.css";
 const Modal = ({
   showModal,
   setShowModal,
-  handleSubmit,
-  projectTitle,
-  setProjectTitle,
   modalTitle,
+  projectBio,
+  setProjectBio,
+  submitBio
 }) => {
   const active = showModal ? "modal is-active" : "modal";
   return showModal ? (
@@ -22,17 +22,8 @@ const Modal = ({
           >
             {modalTitle}
           </h1>
-          {/* <button
-            className="delete"
-            onClick={setShowModal}
-            aria-label="close"
-          ></button> */}
-          <BioForm />
+          <BioForm  projectBio={projectBio} setProjectBio={setProjectBio} submitBio={submitBio} />
         </section>
-        {/* <footer className="">
-        <button className="button is-success">Save changes</button>
-        <button className="button" onClick={setShowModal}>Cancel</button>
-      </footer> */}
       </div>
     </div>
   ) : null;

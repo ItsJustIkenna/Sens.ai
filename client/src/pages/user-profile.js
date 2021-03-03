@@ -31,6 +31,22 @@ function UserProfile() {
     });
   }, []);
 
+  const submitBio = (e) => {
+     e.preventDefault();
+    axios.put("/api/recruitee/" + id, {bio: userdata.bio}).then((response) => {
+      console.log(userdata.bio);
+      console.log(response.data);
+      setUserdata({ ...userdata, ...response.data });
+    });
+    
+  }
+
+  const setProjectBio = (event) => {
+    event.preventDefault();
+    console.log("change input to" , userdata.bio);
+    setUserdata({...userdata, bio: event.target.value})
+  }
+
   const handleSubmit = () => {
     console.log(projectTitle);
   };
@@ -48,7 +64,7 @@ function UserProfile() {
         src={userdata.src}
         bioDes={userdata.bio}
         option={userdata.projects}
-        id={userdata.id}
+        id={userdata._id}
         projectTitle={projectTitle}
         title={userdata.username}
         onClick={toggleModal}
@@ -68,6 +84,8 @@ function UserProfile() {
         showModal={showBioModal}
         setShowModal={toggleBioModal}
         modalTitle={"Add your Bio"}
+        setProjectBio={setProjectBio}
+        submitBio={submitBio}
       />
       <div className="container is-widescreen"></div>
     </div>

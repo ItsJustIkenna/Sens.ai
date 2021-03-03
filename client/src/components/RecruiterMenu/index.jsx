@@ -1,36 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import RecruiterPhoto from "../RecruiterPhoto/index";
-import UserBio from "../UserBio/index";
-import UserProjects from "../UserProjects/index";
-import ProfileMenu from "../ProfileMenu/index";
 import CRUDMenu from "../CRUDMenu/index";
 import "../UserTitle/index";
 
-const RecruiterMenu = ({
-  width,
-  height,
-  src,
-  position,
-  bioDes,
-  projDes,
-  handleSubmit,
-  option,
-  op2,
-  op3,
-  op4,
-  op5,
-  projectTitle,
-  setProjectTitle,
-  id,
-  title,
-  onClick,
-  onClickBio,
-  onClickProjects,
-}) => {
+const RecruiterMenu = ({ src, position, title, onClick, onClickBio }) => {
+  const [edit, setEdit] = useState(false);
+  const toggleEdit = () => {
+    setEdit(!edit);
+  };
   return (
     <div className="container" style={{ alignContent: position }}>
-
-      
       {/* User Name Title Black */}
       <div
         className="column"
@@ -45,7 +24,7 @@ const RecruiterMenu = ({
         </h1>
       </div>
 
-      <RecruiterPhoto src={src} bottom="300px" left="20px"/>
+      <RecruiterPhoto src={src} bottom="300px" left="20px" />
 
       <section
         className="column"
@@ -75,13 +54,15 @@ const RecruiterMenu = ({
           >
             {title}
           </h1>
-          <button
-            className="add-btn"
-            onClick={onClickBio}
-            style={{ margin: "10px 0px 0px 15px" }}
-          >
-            +
-          </button>
+          {edit && (
+            <button
+              className="add-btn grow"
+              onClick={onClickBio}
+              style={{ margin: "10px 0px 0px 15px" }}
+            >
+              +
+            </button>
+          )}
           <p
             className="column is-12 has-text-white"
             style={{ textAlign: "left", paddingTop: "6px", float: "left" }}
@@ -101,8 +82,7 @@ const RecruiterMenu = ({
             width: "50%",
             float: "right",
             paddingRight: "0px",
-            paddingLeft: "340px"
-            
+            paddingLeft: "340px",
           }}
         >
           <h1
@@ -111,28 +91,30 @@ const RecruiterMenu = ({
           >
             Positions
           </h1>
-          <button
-            className="add-btn"
-            onClick={onClickBio}
-            style={{ margin: "10px 0px 0px 15px" }}
-          >
-            +
-          </button>
+          {edit && (
+            <button
+              className="add-btn grow"
+              onClick={onClickBio}
+              style={{ margin: "10px 0px 0px 15px" }}
+            >
+              +
+            </button>
+          )}
           <p
             className="column is-12 has-text-white"
-            style={{ textAlign: "left", paddingTop: "6px" , float: "left" }}
-          >
-            Lead Developer.
-          </p>
-          <p
-            className="column is-12 has-text-white"
-            style={{ textAlign: "left", paddingTop: "6px" , float: "left" }}
+            style={{ textAlign: "left", paddingTop: "6px", float: "left" }}
           >
             Lead Developer.
           </p>
           <p
             className="column is-12 has-text-white"
-            style={{ textAlign: "left", paddingTop: "6px" , float: "left" }}
+            style={{ textAlign: "left", paddingTop: "6px", float: "left" }}
+          >
+            Lead Developer.
+          </p>
+          <p
+            className="column is-12 has-text-white"
+            style={{ textAlign: "left", paddingTop: "6px", float: "left" }}
           >
             Lead Developer.
           </p>
@@ -154,13 +136,15 @@ const RecruiterMenu = ({
           >
             Ikigai
           </h1>
-          <button
-            className="add-btn"
-            onClick={onClickBio}
-            style={{ margin: "10px 0px 0px 15px" }}
-          >
-            +
-          </button>
+          {edit && (
+            <button
+              className="add-btn grow"
+              onClick={onClickBio}
+              style={{ margin: "10px 0px 0px 15px" }}
+            >
+              +
+            </button>
+          )}
           <p
             className="column is-12 has-text-white"
             style={{ textAlign: "left", paddingTop: "6px", float: "left" }}
@@ -177,7 +161,7 @@ const RecruiterMenu = ({
             width: "50%",
             float: "right",
             paddingRight: "0px",
-            paddingLeft: "340px"
+            paddingLeft: "340px",
           }}
         >
           <h1
@@ -186,13 +170,15 @@ const RecruiterMenu = ({
           >
             Website
           </h1>
-          <button
-            className="add-btn"
-            onClick={onClickBio}
-            style={{ margin: "10px 0px 0px 15px" }}
-          >
-            +
-          </button>
+          {edit && (
+            <button
+              className="add-btn"
+              onClick={onClickBio}
+              style={{ margin: "10px 0px 0px 15px" }}
+            >
+              +
+            </button>
+          )}
           <p
             className="column is-12 has-text-white"
             style={{ textAlign: "left", paddingTop: "6px", float: "left" }}
@@ -200,13 +186,10 @@ const RecruiterMenu = ({
             "www.macrosoft.com"
           </p>
         </div>
-
-
-
-
       </section>
+      
       <div className="column is-12" style={{ display: "inline-block" }}>
-        <CRUDMenu onClick={onClick} />
+        <CRUDMenu onClick={onClick} toggleEdit={toggleEdit} />
       </div>
     </div>
   );
