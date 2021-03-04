@@ -7,6 +7,7 @@ const skillsRoutes = require("./skills");
 const projectsRoutes = require("./projects");
 const messagesRoutes = require("./messages");
 const openPositionsRoutes = require("./openPositions");
+const loginRoutes = require("./login");
 
 // Ikigai routes
 router.use("/ikigai", ikigaiRoutes);
@@ -28,6 +29,9 @@ router.use("/messages", messagesRoutes);
 
 //Open Positions Routes
 router.use("/openPositions", openPositionsRoutes);
+
+// Open Login Routes
+router.use("/login", loginRoutes);
 
 // For anything else, render the html page
 router.use(function (req, res) {

@@ -1,11 +1,17 @@
 import React from "react";
 import Header from "../components/Header_Log_Page/index";
+import axios from "axios";
+import {useHistory} from "react-router";
 
 function Login() {
-
+  const history = useHistory();
   const submitLogin = () => {
-    console.log()
-  }
+    axios.post("/api/login", { email: "email@email.com", password: "password" }).then((response) => {
+      history.push("/pages/user-profile")
+      console.log(response.data);
+    });
+    console.log();
+  };
 
   return (
     <div
@@ -21,7 +27,14 @@ function Login() {
         style={{ display: "table", alignContent: "center" }}
       >
         {/* Title */}
-        <div className="formBlock" style={{paddingBottom: "20px" , display: "inline", alignContent: "center"}}>
+        <div
+          className="formBlock"
+          style={{
+            paddingBottom: "20px",
+            display: "inline",
+            alignContent: "center",
+          }}
+        >
           <div className="content">
             <h1 className="title has-text-black is-4">Login</h1>
           </div>
@@ -88,13 +101,13 @@ function Login() {
 
         <div className="field">
           <p className="control">
-            <a
+            <button
               className="button is-light is-rounded"
-              href="../../pages/user-profile"
+              // href="../../pages/user-profile"
               onClick={submitLogin}
             >
               Log in
-            </a>
+            </button>
           </p>
         </div>
 
@@ -112,7 +125,7 @@ function Login() {
 
         <div className="field">
           <p className="control">
-            <button className="button is-success" id="login-google-btn" >
+            <button className="button is-success" id="login-google-btn">
               Login with Google+
             </button>
           </p>
