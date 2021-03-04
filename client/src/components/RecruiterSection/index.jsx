@@ -4,12 +4,10 @@ import Button from "../Button/index";
 import { Spring } from "react-spring/renderprops";
 import { Transition, animated } from 'react-spring/renderprops'
 
-const RecruiterSection = ({ src, position, title }) => {
-  // state = { index: 0 }
-  // toggle = e =>
-  //   this.setState(state => ({
-  //     index: state.index === 2 ? 0 : state.index + 1,
-  //   }))
+const RecruiterSection = ({ src, position, company , name , bio , recruiterPosition , website }) => {
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <div
       className="container"
@@ -25,7 +23,7 @@ const RecruiterSection = ({ src, position, title }) => {
           style={{ textAlign: "center" }}
           id="usertitle"
         >
-          {title}
+          {company}
         </h1>
       </div>
 
@@ -37,6 +35,7 @@ const RecruiterSection = ({ src, position, title }) => {
           className="circle-btn mr-6 "
           title="Left"
           padding="45px 42px 30px 42px"
+          onClick={refreshPage}
           // onClick={toggle}
         />
       </section>
@@ -44,7 +43,7 @@ const RecruiterSection = ({ src, position, title }) => {
         {(props) => (
           <div style={props}>
             {" "}
-            <RecruiterPhoto src={src} bottom="320px" left="160px" />
+            <RecruiterPhoto src={src} bottom="320px" left="160px" recruiterPosition={recruiterPosition} />
             <section
               className="column"
               style={{
@@ -75,7 +74,7 @@ const RecruiterSection = ({ src, position, title }) => {
                     float: "left",
                   }}
                 >
-                  {title}
+                  {name}
                 </h1>
                 <p
                   className="column is-12 has-text-white"
@@ -85,10 +84,7 @@ const RecruiterSection = ({ src, position, title }) => {
                     float: "left",
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat 1).
+                  {bio}
                 </p>
               </div>
               {/* Recruiter Open Positions */}
@@ -121,32 +117,13 @@ const RecruiterSection = ({ src, position, title }) => {
                     float: "left",
                   }}
                 >
-                  Lead Developer.
+                  Software Developer
                 </p>
-                <p
-                  className="column is-12 has-text-white"
-                  style={{
-                    textAlign: "left",
-                    paddingTop: "6px",
-                    float: "left",
-                  }}
-                >
-                  Lead Developer.
-                </p>
-                <p
-                  className="column is-12 has-text-white"
-                  style={{
-                    textAlign: "left",
-                    paddingTop: "6px",
-                    float: "left",
-                  }}
-                >
-                  Lead Developer.
-                </p>
+                
               </div>
               {/* Recruiter Ikigai */}
 
-              <div
+              {/* <div
                 className="block"
                 style={{
                   height: "auto",
@@ -175,7 +152,8 @@ const RecruiterSection = ({ src, position, title }) => {
                 >
                   "Start Up Founder"
                 </p>
-              </div>
+              </div> */}
+
               {/* Recruiter Website */}
 
               <div
@@ -183,7 +161,7 @@ const RecruiterSection = ({ src, position, title }) => {
                 style={{
                   height: "auto",
                   width: "50%",
-                  float: "right",
+                  float: "left",
                   paddingRight: "0px",
                   paddingLeft: "340px",
                 }}
@@ -206,7 +184,7 @@ const RecruiterSection = ({ src, position, title }) => {
                     float: "left",
                   }}
                 >
-                  "www.macrosoft.com"
+                  {website}
                 </p>
               </div>
             </section>
@@ -218,6 +196,7 @@ const RecruiterSection = ({ src, position, title }) => {
           className="circle-btn ml-6 "
           title="Right"
           padding="45px 37px 30px 37px"
+          onClick={refreshPage}
         />
       </section>
 

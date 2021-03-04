@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/index";
 
-const CRUDMenu = ({onClick , toggleEdit}) => {
+const CRUDMenu = ({toggleEdit}) => {
   return (
     <div style={{display: "flex"}}>
       <Button

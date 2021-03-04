@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserProjects = ({ option, edit, id, onClickProjects }) => {
+const UserProjects = ({ option, edit, onClickProjects , deleteProject }) => {
   return (
     <div
       className="block "
@@ -33,7 +33,8 @@ const UserProjects = ({ option, edit, id, onClickProjects }) => {
             {edit && (
               <button
                 className="add-btn grow"
-                onClick={null}
+                onClick={deleteProject}
+                value={index}
                 style={{ margin: "-9px 15px 0px 0px", float: "left" }}
               >
                 -
