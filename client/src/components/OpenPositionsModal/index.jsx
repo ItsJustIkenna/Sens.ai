@@ -1,14 +1,14 @@
 import React from "react";
-import ProjectsForm from "../ProjectsForm/index";
+import OpenPositionsForm from "../OpenPositionsForm/index";
 import "./index.css";
 
-const Modal = ({
+const OpenPositionsModal = ({
   showModal,
   setShowModal,
-  submitProject,
-  projectTitle,
-  setProject,
   modalTitle,
+  openPosition,
+  setOpenPosition,
+  submitOpenPosition
 }) => {
   const active = showModal ? "modal is-active" : "modal";
   return showModal ? (
@@ -22,21 +22,11 @@ const Modal = ({
           >
             {modalTitle}
           </h1>
-         
-          <ProjectsForm
-            submitProject={submitProject}
-            projectTitle={projectTitle}
-            setProject={setProject}
-            setShowModal={setShowModal}
-          />
+          <OpenPositionsForm  openPosition={openPosition} setOpenPosition={setOpenPosition} submitOpenPosition={submitOpenPosition} />
         </section>
-        {/* <footer className="">
-        <button className="button is-success">Save changes</button>
-        <button className="button" onClick={setShowModal}>Cancel</button>
-      </footer> */}
       </div>
     </div>
   ) : null;
 };
 
-export default Modal;
+export default OpenPositionsModal;

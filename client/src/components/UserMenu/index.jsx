@@ -13,9 +13,11 @@ const UserMenu = ({
   option,
   id,
   title,
-  onClick,
+  onClickEdit,
   onClickBio,
+  onClickTitle,
   onClickProjects,
+  deleteProject
 }) => {
   const [edit, setEdit] = useState(false);
   const toggleEdit = () => {
@@ -38,7 +40,7 @@ const UserMenu = ({
           {edit && (
             <button
               className="add-btn grow"
-              onClick={onClickBio}
+              onClick={onClickTitle}
               style={{ float: "right", margin: "-5px 0px 0px 15px" }}
             >+</button>
           )}
@@ -71,11 +73,12 @@ const UserMenu = ({
           option={option}
           id={id}
           edit={edit}
+          deleteProject={deleteProject}
         />
         {/*  */}
       </section>
       <div className="column is-12" style={{ display: "inline-block" }}>
-        <CRUDMenu onClick={onClick} toggleEdit = {toggleEdit} />
+        <CRUDMenu onClick={onClickEdit} toggleEdit = {toggleEdit} />
       </div>
     </div>
   );

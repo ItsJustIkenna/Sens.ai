@@ -1,14 +1,14 @@
 import React from "react";
-import ProjectsForm from "../ProjectsForm/index";
+import TitleForm from "../TitleForm/index";
 import "./index.css";
 
-const Modal = ({
+const TitleModal = ({
   showModal,
   setShowModal,
-  submitProject,
-  projectTitle,
-  setProject,
   modalTitle,
+  title,
+  setTitle,
+  submitTitle
 }) => {
   const active = showModal ? "modal is-active" : "modal";
   return showModal ? (
@@ -22,21 +22,11 @@ const Modal = ({
           >
             {modalTitle}
           </h1>
-         
-          <ProjectsForm
-            submitProject={submitProject}
-            projectTitle={projectTitle}
-            setProject={setProject}
-            setShowModal={setShowModal}
-          />
+          <TitleForm  title={title} setTitle={setTitle} submitTitle={submitTitle} />
         </section>
-        {/* <footer className="">
-        <button className="button is-success">Save changes</button>
-        <button className="button" onClick={setShowModal}>Cancel</button>
-      </footer> */}
       </div>
     </div>
   ) : null;
 };
 
-export default Modal;
+export default TitleModal;
