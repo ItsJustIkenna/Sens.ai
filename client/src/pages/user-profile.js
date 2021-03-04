@@ -6,7 +6,7 @@ import BioModal from "../components/BioModal/index";
 import TitleModal from "../components/TitleModal/index";
 import axios from "axios";
 
-const id = "6040b382f6eaa34908374058";
+const id = "6040f467fe1ec87e1d68446a";
 
 function refreshPage() {
   window.location.reload(false);

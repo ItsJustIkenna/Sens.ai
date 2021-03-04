@@ -24,9 +24,10 @@ const UserProjects = ({ option, edit, onClickProjects , deleteProject }) => {
       {option.map((projectName, index) => {
         index = projectName._id;
         return (
+          <a href={projectName.url} >
           <li
             className="column is-12 has-text-white"
-            style={{ color: "white", display: "block", float: "left" }}
+            style={{ color: "white", display: "block", float: "left" , textDecoration : "underline"}}
             key={index}
           >
             {projectName.name}
@@ -41,6 +42,7 @@ const UserProjects = ({ option, edit, onClickProjects , deleteProject }) => {
               </button>
             )}
           </li>
+          </a>
         );
       })}
     </div>
