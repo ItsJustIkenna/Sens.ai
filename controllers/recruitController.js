@@ -1,37 +1,38 @@
 const db = require("../models");
 
-// Defining methods for the recruiterController
+// Defining methods for the recruitController
 module.exports = {
   findAll: function (req, res) {
-    db.Recruiter.find(req.query)
+    db.Recruit.find(req.query)
+      .populate("Ikigai")
       .populate("Messages")
-      .populate("OpenPositions")
+      .populate("Skills")
+      .populate("Projects")
       .sort({ date: -1 })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    db.Recruiter.findById(req.params.id)
+    db.Recruit.findById(req.params.id)
+      .populate("Ikigai")
       .populate("Messages")
-      .populate("OpenPositions")
+      .populate("Skills")
+      .populate("Projects")
       .then((dbModel) => res.json(dbModel))
-      .catch((err) => {
-        console.log(err);
-        res.status(422).json(err);
-      });
+      .catch((err) => res.status(422).json(err));
   },
   create: function (req, res) {
-    db.Recruiter.create(req.body)
+    db.Recruit.create(req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   update: function (req, res) {
-    db.Recruiter.findByIdAndUpdate({ _id: req.params.id }, req.body)
+    db.Recruit.findByIdAndUpdate({ _id: req.params.id }, req.body)
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
   delete: function (req, res) {
-    db.Recruiter.findOneAndDelete({ _id: req.params.id }, req.body)
+    db.Recruit.findOneAndDelete({ _id: req.params.id }, req.body)
       .then((dbModel) => dbModel.delete())
       .catch((err) => res.status(422).json(err));
   },

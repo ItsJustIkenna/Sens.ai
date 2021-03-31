@@ -1,34 +1,43 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Ikigai from "./pages/ikigai";
-import Landing from "./pages/landing";
-import Login from "./pages/login";
-import Signup from "./pages/signup";
-import userProfile from "./pages/user-profile";
-import homepage from "./pages/homepage-user";
-import recruiterProfile from "./pages/recruiter-profile";
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LandingPage from "./pages/landingPage";
+import HomePage from "./pages/homePage";
+import AccountCreationPage from "./pages/accountCreationPage";
+import LoginPage from "./pages/loginPage";
+import ProfilePage from "./pages/profilePage";
+import SignUpPage from "./pages/signupPage";
+import Navbar from "./components/navbarComponent";
+import "./App.css";
 
 function App() {
-
   return (
-    <Router>
-      <Switch>
+    <div className="app">
+      <Router>
         <div>
-          <Route path="/" exact component={Landing} />
-          <Route path="/pages/login" exact component={Login} />
-          <Route path="/pages/signup" exact component={Signup} />
-          <Route path="/pages/ikigai" exact component={Ikigai} />
-          <Route path="/pages/user-profile" exact component={userProfile} />
-          <Route path="/pages/homepage-user" exact component={homepage} />
-          <Route
-            path="/pages/recruiter-profile"
-            exact
-            component={recruiterProfile}
-          />
+          <Navbar />
+          <Switch>
+            <Route exact path={["/", "/landingPage"]}>
+              <LandingPage />
+            </Route>
+            <Route>
+              <SignUpPage />
+            </Route>
+            <Route>
+              <AccountCreationPage />
+            </Route>
+            <Route>
+              <LoginPage />
+            </Route>
+            <Route>
+              <HomePage />
+            </Route>
+            <Route>
+              <ProfilePage />
+            </Route>
+          </Switch>
         </div>
-      </Switch>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
