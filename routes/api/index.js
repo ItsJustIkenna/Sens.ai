@@ -2,12 +2,13 @@ const path = require("path");
 const router = require("express").Router();
 const ikigaiRoutes = require("./ikigai");
 const recruiterRoutes = require("./recruiters");
-const recruiteeRoutes = require("./recruitees");
+const recruitRoutes = require("./recruits");
 const skillsRoutes = require("./skills");
 const projectsRoutes = require("./projects");
 const messagesRoutes = require("./messages");
 const openPositionsRoutes = require("./openPositions");
-const loginRoutes = require("./login");
+const signInRoutes = require("./signin");
+const userRoutes = require("./user");
 
 // Ikigai routes
 router.use("/ikigai", ikigaiRoutes);
@@ -16,7 +17,7 @@ router.use("/ikigai", ikigaiRoutes);
 router.use("/recruiter", recruiterRoutes);
 
 // Recruitee Routes
-router.use("/recruitee", recruiteeRoutes);
+router.use("/recruit", recruitRoutes);
 
 // Skills Routes
 router.use("/skills", skillsRoutes);
@@ -27,11 +28,14 @@ router.use("/projects", projectsRoutes);
 // Messages Routes
 router.use("/messages", messagesRoutes);
 
-//Open Positions Routes
+// Open Positions Routes
 router.use("/openPositions", openPositionsRoutes);
 
-// Open Login Routes
-router.use("/login", loginRoutes);
+// Login Routes
+router.use("/signin", signInRoutes);
+
+// User Routes
+router.user("/user", userRoutes);
 
 // For anything else, render the html page
 router.use(function (req, res) {

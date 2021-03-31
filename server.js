@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const routes = require("./routes/index");
+require("dotenv").config();
 
 const PORT = process.env.PORT || 3001;
 
@@ -10,17 +11,15 @@ app.use(express.json());
 
 app.use(express.static("client/build"));
 
+const mongodb = process.env.MONGODB;
+
 mongoose
-  .connect(
-    process.env.MONGODB_URI ||
-      "mongodb+srv://ikenna-admin:CRJEiIoa4yojidkW@cluster0.k6j0v.mongodb.net/sensai_db?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: false,
-      useCreateIndex: true,
-    }
-  )
+  .connect(process.env.MONGODB_URI || mongodb, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
   .then(() => {
     console.log("Successfully connected to MongoDB");
   })

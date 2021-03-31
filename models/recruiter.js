@@ -9,18 +9,12 @@ const recruiterSchema = new Schema({
   name: { type: String, required: true },
   position: { type: String, required: true },
   website: { type: String, required: true },
-  bio: { type: String, required: true },
+  company_mission: { type: String, required: true },
   company: { type: String, required: true },
   open_positions: [
     {
       type: Schema.Types.ObjectId,
       ref: "OpenPositions",
-    },
-  ],
-  ikigai: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Ikigai",
     },
   ],
   messages: [
