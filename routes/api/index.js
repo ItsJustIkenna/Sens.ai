@@ -35,7 +35,7 @@ router.use("/openPositions", openPositionsRoutes);
 router.use("/signin", signInRoutes);
 
 // User Routes
-router.user("/user", userRoutes);
+router.use("/user", userRoutes);
 
 // For anything else, render the html page
 router.use(function (req, res) {

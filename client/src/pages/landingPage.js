@@ -1,8 +1,11 @@
 import React from "react";
-import "./App.css";
 
 function landingPage() {
-  return <div></div>;
+  return (
+    <>
+      <p>This is the landing page</p>
+    </>
+  );
 }
 
 export default landingPage;

@@ -7,7 +7,7 @@ import LoginPage from "./pages/loginPage";
 import ProfilePage from "./pages/profilePage";
 import SignUpPage from "./pages/signupPage";
 import Navbar from "./components/navbarComponent";
-import "./App.css";
+
 
 function App() {
   return (
@@ -19,19 +19,19 @@ function App() {
             <Route exact path={["/", "/landingPage"]}>
               <LandingPage />
             </Route>
-            <Route>
+            <Route exact path="/signinPage">
               <SignUpPage />
             </Route>
-            <Route>
+            <Route exact path="/accountCreationPage">
               <AccountCreationPage />
             </Route>
-            <Route>
+            <Route exact path="/login">
               <LoginPage />
             </Route>
-            <Route>
+            <Route exact path="/homePage">
               <HomePage />
             </Route>
-            <Route>
+            <Route exact path="/profilePage">
               <ProfilePage />
             </Route>
           </Switch>

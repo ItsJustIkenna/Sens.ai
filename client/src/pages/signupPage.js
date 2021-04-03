@@ -1,8 +1,11 @@
 import React from "react";
-import "./App.css";
 
 function signupPage() {
-  return <div></div>;
+  return (
+    <>
+      <p>This is the signup page</p>
+    </>
+  );
 }
 
 export default signupPage;

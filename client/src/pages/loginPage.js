@@ -1,8 +1,11 @@
 import React from "react";
-import "./App.css";
 
 function loginPage() {
-  return <div></div>;
+  return (
+    <>
+      <p>This is the login page</p>
+    </>
+  );
 }
 
 export default loginPage;
