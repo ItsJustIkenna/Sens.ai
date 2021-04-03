@@ -1,8 +1,11 @@
 import React from "react";
-import "./App.css";
 
 function accountCreationPage() {
-  return <div></div>;
+  return (
+    <>
+      <p>This is the account page</p>
+    </>
+  );
 }
 
 export default accountCreationPage;
