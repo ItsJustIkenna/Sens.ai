@@ -1,10 +1,12 @@
 import React from "react";
 import "./style.css";
+import AccountCircleIcon from '@material-ui/icons';
 
 function index() {
   return (
     <>
-      <p>I am a header</p>
+      <h2>I am a header</h2>
+      <AccountCircleIcon />
     </>
   );
 }
