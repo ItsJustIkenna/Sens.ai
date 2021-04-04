@@ -13,29 +13,14 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <div>
-          <Navbar />
-          <Switch>
-            <Route exact path={["/", "/landingPage"]}>
-              <LandingPage />
-            </Route>
-            <Route exact path="/signinPage">
-              <SignUpPage />
-            </Route>
-            <Route exact path="/accountCreationPage">
-              <AccountCreationPage />
-            </Route>
-            <Route exact path="/login">
-              <LoginPage />
-            </Route>
-            <Route exact path="/homePage">
-              <HomePage />
-            </Route>
-            <Route exact path="/profilePage">
-              <ProfilePage />
-            </Route>
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={LandingPage}/>
+          <Route exact path="/homepage/:id" component={HomePage}/>
+          <Route exact path="/signuppage" component={SignUpPage}/>
+          <Route exact path="/accountcreationpage" component={AccountCreationPage}/>
+          <Route exact path="/loginpage" component={LoginPage}/>
+          <Route exact path="/profilepage/:id" component={ProfilePage}/>
+        </Switch>
       </Router>
     </div>
   );
