@@ -6,7 +6,6 @@ import AccountCreationPage from "./pages/accountCreationPage";
 import LoginPage from "./pages/loginPage";
 import ProfilePage from "./pages/profilePage";
 import SignUpPage from "./pages/signupPage";
-import Navbar from "./components/navbarComponent";
 
 
 function App() {
