@@ -5,10 +5,10 @@ const recruitSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
   email: { type: String, required: true },
-  profile_picture: { type: String, contentType: String },
+  profilePictureUrl: { type: String, required: true },
   bio: { type: String, required: true },
   name: { type: String, required: true },
-  resume: { type: String, contentType: String },
+  resumeUrl: { type: String, required: true },
   age: { type: Number, required: true },
   education: { type: String, required: true },
   projects: [

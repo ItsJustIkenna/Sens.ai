@@ -5,7 +5,7 @@ const recruiterSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
   email: { type: String, required: true },
-  profile_picture: { data: Buffer, contentType: String },
+  profilePictureUrl: { type: String, required: true },
   name: { type: String, required: true },
   position: { type: String, required: true },
   website: { type: String, required: true },
