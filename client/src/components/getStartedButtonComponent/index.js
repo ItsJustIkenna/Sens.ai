@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 function index() {
   return (
     <div>
-      <Button variant="contained">What is Ikigai?</Button>
+      <Button variant="contained">Get Started</Button>
     </div>
   );
 }

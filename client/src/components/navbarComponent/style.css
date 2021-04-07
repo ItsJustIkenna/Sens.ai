@@ -1,0 +1,10 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar__logo {
+    object-fit: contain;
+    height: 40px;
+}
