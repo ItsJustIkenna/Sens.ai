@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../img/higher-me-logo.png";
 import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function index() {
@@ -13,9 +14,13 @@ function index() {
         <p>about</p>
       </IconButton>
 
-      <Button variant="contained">Sign Up</Button>
+      <Link to="/signuppage">
+        <Button variant="contained">Sign Up</Button>
+      </Link>
 
-      <Button variant="contained">Login</Button>
+      <Link to="/loginpage">
+        <Button variant="contained">Login</Button>
+      </Link>
     </div>
   );
 }

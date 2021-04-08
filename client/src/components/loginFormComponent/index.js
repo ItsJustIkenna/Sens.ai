@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../img/black-women-in-the-workplace.jpg";
 import logo from "../../img/higher-me-logo.png";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function index() {
@@ -13,7 +14,9 @@ function index() {
               <img src={img} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-7 px-5 pt-5">
-              <img className="navbar__logo" src={logo} alt="" />
+              <Link to="/">
+                <img className="navbar__logo" src={logo} alt="" />
+              </Link>
               <h4> Login to your account</h4>
               <form>
                 <div className="form-row">
@@ -36,9 +39,11 @@ function index() {
                 </div>
                 <div className="form-row">
                   <div className="col-lg-7">
-                    <button type="button" className="btn1">
-                      Login
-                    </button>
+                    <Link to="/homepage/:id">
+                      <button type="button" className="btn1">
+                        Login
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <a href="#">Forgot password</a>

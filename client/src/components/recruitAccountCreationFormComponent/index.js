@@ -1,6 +1,7 @@
 import React from "react";
 import img from "../../img/black-men-in-the-workplace2.jpg";
 import logo from "../../img/higher-me-logo.png";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 function index() {
@@ -35,9 +36,11 @@ function index() {
                 </div>
                 <div className="form-row">
                   <div className="col-lg-7">
-                    <button type="button" className="btn1">
-                      Create Account
-                    </button>
+                    <Link to="/homepage/:id">
+                      <button type="button" className="btn1">
+                        Create Account
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </form>
