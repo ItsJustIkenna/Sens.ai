@@ -3,6 +3,7 @@ import "./style.css";
 import PersonIcon from "@material-ui/icons/Person";
 import IconButton from "@material-ui/core/IconButton";
 import symbol from "../../img/higher-me-symbol.png";
+import { Link } from "react-router-dom";
 import ForumIcon from "@material-ui/icons/Forum";
 
 function index() {
@@ -12,9 +13,11 @@ function index() {
         <PersonIcon fontSize="large" className="header__icon" />
       </IconButton>
 
-      <IconButton>
-        <img className="header__symbol" src={symbol} alt="" />
-      </IconButton>
+      <Link to="/">
+        <IconButton>
+          <img className="header__symbol" src={symbol} alt="" />
+        </IconButton>
+      </Link>
 
       <IconButton>
         <ForumIcon fontSize="large" className="header__icon" />

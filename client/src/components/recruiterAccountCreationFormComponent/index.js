@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../img/black-women-in-the-workplace.jpg";
+import img from "../../img/black-men-in-the-workplace.jpg";
 import logo from "../../img/higher-me-logo.png";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -14,16 +14,13 @@ function index() {
               <img src={img} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-7 px-5 pt-5">
-              <Link to="/">
-                <img className="navbar__logo" src={logo} alt="" />
-              </Link>
-              <h4> Login to your account</h4>
+              <img className="navbar__logo" src={logo} alt="" />
               <form>
                 <div className="form-row">
                   <div className="col-lg-7">
                     <input
-                      type="email"
-                      placeholder="Email"
+                      type="name"
+                      placeholder="Name"
                       className="form-control my-3 p-4"
                     />
                   </div>
@@ -31,8 +28,35 @@ function index() {
                 <div className="form-row">
                   <div className="col-lg-7">
                     <input
-                      type="password"
-                      placeholder="Password"
+                      type="position"
+                      placeholder="Position"
+                      className="form-control my-3 p-4"
+                    />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="col-lg-7">
+                    <input
+                      type="website"
+                      placeholder="Website"
+                      className="form-control my-3 p-4"
+                    />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="col-lg-7">
+                    <input
+                      type="company"
+                      placeholder="Company"
+                      className="form-control my-3 p-4"
+                    />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="col-lg-7">
+                    <textarea
+                      type="mission"
+                      placeholder="Mission"
                       className="form-control my-3 p-4"
                     />
                   </div>
@@ -41,15 +65,11 @@ function index() {
                   <div className="col-lg-7">
                     <Link to="/homepage/:id">
                       <button type="button" className="btn1">
-                        Login
+                        Create Account
                       </button>
                     </Link>
                   </div>
                 </div>
-                <a href="#">Forgot password</a>
-                <p>
-                  Don't have an account? <a href="#">Register here</a>
-                </p>
               </form>
             </div>
           </div>

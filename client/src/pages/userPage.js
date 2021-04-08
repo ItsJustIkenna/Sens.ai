@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Recruit from "../components/recruitComponent";
+import Recruiter from "../components/recruiterComponent";
 
 function userPage() {
-    return (
-        <div>
-            <p>This is the user page</p>
-        </div>
-    )
+  return (
+    <div>
+      <Recruit />
+      <Recruiter />
+    </div>
+  );
 }
 
-export default userPage
+export default userPage;
