@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import img from "../../img/black-women-in-the-workplace2.jpg";
 import logo from "../../img/higher-me-logo.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-function index() {
+export default function Index() {
   return (
     <body>
       <section className="Form my-4 mx-5">
@@ -74,5 +74,3 @@ function index() {
     </body>
   );
 }
-
-export default index;

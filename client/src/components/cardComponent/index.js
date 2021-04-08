@@ -8,7 +8,7 @@ function Index() {
 
   useEffect(() => {
     async function fetchData() {
-      const req = await axios.get("/recruiter");
+      const req = await axios.get("/api/recruit");
 
       setPeople(req.data);
     }

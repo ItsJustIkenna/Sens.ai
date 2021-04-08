@@ -48,7 +48,7 @@ function index() {
                 </div>
                 <a href="#">Forgot password</a>
                 <p>
-                  Don't have an account? <a href="#">Register here</a>
+                  Don't have an account? <a href="/signuppage">Register here</a>
                 </p>
               </form>
             </div>

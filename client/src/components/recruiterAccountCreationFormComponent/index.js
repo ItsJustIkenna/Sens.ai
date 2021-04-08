@@ -14,7 +14,10 @@ function index() {
               <img src={img} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-7 px-5 pt-5">
-              <img className="navbar__logo" src={logo} alt="" />
+              <Link to="/">
+                <img className="navbar__logo" src={logo} alt="" />
+              </Link>
+
               <form>
                 <div className="form-row">
                   <div className="col-lg-7">

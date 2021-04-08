@@ -11,14 +11,36 @@ import Founder from "../components/founderComponent";
 function landingPage() {
   return (
     <div className="app">
-      <NavBar />
-      <Slogan />
-      <DropdownButton />
-      <GetStartedButton />
-      <Vision />
-      <Method />
-      <Button />
-      <Founder />
+      <div className="container">
+        <div className="row">
+          <NavBar />
+        </div>
+        <div className="row">
+          <Slogan />
+        </div>
+        <div className="row">
+          <div className="col-6">
+            <DropdownButton />
+          </div>
+          <div className="col-6">
+            <GetStartedButton />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6">
+            <Vision />
+          </div>
+          <div className="col-6">
+            <Method />
+          </div>
+        </div>
+        <div className="row">
+          <Button />
+        </div>
+        <div className="row">
+          <Founder />
+        </div>
+      </div>
     </div>
   );
 }

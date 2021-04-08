@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 
-function index() {
+function Index() {
   return (
     <div>
       <Button variant="contained">What is Ikigai?</Button>
@@ -9,4 +9,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
